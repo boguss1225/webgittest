@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Tutorial 2</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div class="container-fluid">
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  data-toggle="modal" data-target="#regiModal">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="donation.html">Donation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Background image -->
+  <div
+  class="p-5 text-center bg-image header-background" >
+  <div class="mask" >
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Run for Kids</h1>
+        <a class="btn btn-outline-light btn-lg" data-toggle="modal" data-target="#regiModal"role="button"
+        >Call to action</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Background image -->
+</header>
+<div class="card-deck">
+  <div class="card">
+    <div class="card-body text-center">
+      <h5 class="card-title">Why Do We Run? </h5>
+      <p class="card-text">Run marathon for children living in poverty. Children living in poverty face barriers to accessing an education. Increasing access to education can improve the overall health and longevity of a society and growing economies. Yet in many developing countries, children’s access to education can be limited by numerous factors. Therefore, we run to raise the fund for kids who need a support for their education.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body text-center">
+      <img class = "img-responsive" src="img/marathon.jpg" alt="">
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body text-center">
+      <img class = "img-responsive" src="img/running.jpg" alt="">
+    </div>
+  </div>
+
+</div>
+
+<!-- Registration Modal Form -->
+<div class="modal fade" id="regiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Marathon Registration</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form role = "form" class="regiForm">
+          <table class = "responsive">
+            <tr class="form-group">
+              <td style = "width: 40%"><label for="fname">First Name</label></td>
+              <td><input class = "form-control" type="text" id="fname" name ="fname" required></td>
+            </tr>
+
+            <tr class="form-group">
+              <td>Last Name</td>
+              <td><input  class = "form-control" type="text" id="lname" name = "lname" required></td>
+            </tr>
+            <tr class="form-group">
+              <td>Gender</td>
+              <td><input  type="radio" id="gender" value = "female" >Female
+                <input   type="radio" id="gender" value = "male">Male
+                <input   type="radio" id="gender" value = "other">Other
+              </td>
+            </tr>
+            <tr class="form-group">
+              <td>Select a race</td>
+              <td><select  class = "form-control" name="race" id="race" required>
+                <option  class = "form-control" value = "" hidden disabled selected = "selected">Select your race</option>
+                <option  class = "form-control" value="5k">Fun Run 5k</option>
+                <option  class = "form-control" value="half">Half Marathon</option>
+                <option  class = "form-control" value="full">Full Marathon</option>
+
+              </select>
+            </td>
+          </tr>
+          <tr class="form-group">
+            <td>Email</td>
+            <td><input  class = "form-control" type="email" id="email" name ="email" required></td>
+          </tr>
+          <tr class="form-group">
+            <td>Password</td>
+            <td><input class = "form-control"  type="password" id="password" name = "password" required pattern = "(?=.*\d)(?=.*[A-Za-z]).{6,8}" title = "Must contain at least one number, one letters and between 6 and 8 characters"></td>
+          </tr>
+          <tr class="form-group">
+            <td>Age Group</td>
+            <td><select  class = "form-control"  name="division" id="division" required>
+              <option value = "" hidden disabled selected = "selected">Select your age group</option>
+              <option class = "form-control"  value="kids">under 18</option>
+              <option  class = "form-control" value="ya">18-30</option>
+              <option  class = "form-control" value="adults">30-50</option>
+              <option  class = "form-control" value="seniors">50+</option>
+            </select>
+          </td>
+        </tr>
+
+      </table>
+
+      <button class = "btn btn-danger float-right" type = "submit">Register</button>
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </form>
+
+
+  </div>
+  <div class="modal-footer">
+  </div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
